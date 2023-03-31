@@ -4,18 +4,9 @@
   padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-a:link {
-  color: black;
-  text-decoration: none;
-}
-
-a:visited {
+a:link,
+a:visited,
+a:active {
   color: black;
   text-decoration: none;
 }
@@ -23,11 +14,6 @@ a:visited {
 a:hover {
   text-decoration: none;
   color: blue;
-}
-
-a:active {
-  color: black;
-  text-decoration: none;
 }
 
 ul {
@@ -40,69 +26,51 @@ ul {
 li {
   display: inline-block;
 }
-nav {
-  flex-grow: 1;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.6rem;
-  padding: 2rem;
-  z-index: 1;
+
+body {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "head nav"
+    "head nav"
+    "head foot";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 
-.nav-container-1 {
-  letter-spacing: 0.3rem;
-}
-
-.nav-container-2 {
-  display: flex;
-  gap: 2rem;
-  letter-spacing: 0.3rem;
-}
-
-.nav-container-2 a:link {
-  color: black;
-  text-decoration: none;
-}
-
-.nav-container-2 a:visited {
-  color: blue;
-  text-decoration: none;
-}
-
-.nav-container-2 a:hover {
-  text-decoration: none;
-  color: blue;
-}
-
-.nav-container-2 a:active {
-  color: black;
-  text-decoration: none;
-}
-
-main {
-  flex-grow: 8;
+header {
+  grid-area: head;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: "Raleway", sans-serif;
-  line-height: 6vh;
-  letter-spacing: 0.4vh;
-  padding: 2rem;
-  font-size: 5vh;
+  padding: 4rem 0rem 4rem 4rem;
+  font-size: 6.5vh;
+  letter-spacing: 0.4rem;
+  color: #343434;
+}
+
+nav {
+  grid-area: nav;
+  font-size: 1.5rem;
+  padding: 4rem 4rem 4rem 0rem;
 }
 
 footer {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  padding: 2rem 2rem 2rem 2rem;
+  grid-area: foot;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.7rem;
+  padding: 4rem;
+  text-align: right;
 }
 
-.footer-container {
-  font-family: Helvetica, sans-serif;
+.nav-container {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  letter-spacing: 0.3rem;
+}
+
+.nav-container a {
+  color: blue;
 }
