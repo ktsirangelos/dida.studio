@@ -32,29 +32,33 @@ body {
   width: 100%;
   height: 100%;
   grid-template-areas:
-    "head nav"
-    "head nav"
-    "head foot";
+    "nav nav"
+    "main main"
+    "foot foot";
   grid-template-rows: 1fr 10fr 1fr;
   grid-template-columns: 3fr 1fr;
 }
 
-header {
-  grid-area: head;
+main {
+  margin-top: 5%;
+  grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: "Raleway", sans-serif;
   padding: 4rem 0rem 4rem 4rem;
-  font-size: 6.5vh;
+  font-size: 2.5vh;
   letter-spacing: 0.4rem;
+  line-height: 3rem;
   color: #343434;
 }
 
 nav {
-  grid-area: nav;
+  position: fixed;
+  width: 100%;
+  /* grid-area: nav; */
   font-size: 1.5rem;
-  padding: 4rem 4rem 4rem 0rem;
+  padding: 4rem 4rem 4rem 4rem;
 }
 
 footer {
