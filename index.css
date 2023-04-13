@@ -1,7 +1,14 @@
+@font-face {
+  src: url("HelveticaNeueCyr-Light.woff2") format("woff2");
+  font-family: "HelveticaNeue-Light";
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "HelveticaNeue-Light", sans-serif;
 }
 
 a:link,
@@ -102,8 +109,6 @@ header {
 #location,
 #email,
 #phone {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 3vh;
   align-self: self-end;
 }
@@ -114,8 +119,6 @@ header {
 #location-content,
 #email-content,
 #phone-content {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 7vh;
   align-self: self-end;
 }
@@ -123,15 +126,11 @@ header {
 nav {
   grid-area: nav;
   font-size: 3vh;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 footer {
   grid-area: foot;
   align-self: self-end;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 0.8rem;
   text-align: right;
 }
