@@ -13,7 +13,7 @@ a:active {
 
 a:hover {
   text-decoration: none;
-  color: blue;
+  color: white;
 }
 
 ul {
@@ -28,49 +28,120 @@ li {
 }
 
 body {
+  background-color: #c9c3b8;
   display: grid;
   width: 100%;
   height: 100%;
   grid-template-areas:
     "head nav"
-    "head nav"
     "head foot";
-  grid-template-rows: 1fr 10fr 1fr;
-  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 10fr 1fr;
+  grid-template-columns: 5fr 2fr;
+  padding: 3rem;
 }
 
 header {
   grid-area: head;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: "Raleway", sans-serif;
-  padding: 4rem 0rem 4rem 4rem;
+  display: grid;
+  grid-template-areas:
+    "title1 content1"
+    "title2 content2"
+    "title3 content3"
+    "title4 content4"
+    "title5 content5"
+    "title6 content6";
+  grid-template-rows: auto;
+  grid-template-columns: 180px 5fr;
+}
+
+#project {
+  grid-area: title1;
+}
+
+#type {
+  grid-area: title2;
+}
+#architect {
+  grid-area: title3;
+}
+
+#location {
+  grid-area: title4;
+}
+
+#email {
+  grid-area: title5;
+}
+#phone {
+  grid-area: title6;
+}
+
+#project-content {
+  grid-area: content1;
+}
+#type-content {
+  grid-area: content2;
+}
+#architect-content {
+  grid-area: content3;
+  color: white;
+}
+#location-content {
+  grid-area: content4;
+}
+#email-content {
+  grid-area: content5;
+}
+#phone-content {
+  grid-area: content6;
+}
+
+#project,
+#type,
+#architect,
+#location,
+#email,
+#phone {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 3vh;
+  align-self: self-end;
+}
+
+#project-content,
+#type-content,
+#architect-content,
+#location-content,
+#email-content,
+#phone-content {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 7vh;
-  letter-spacing: 0.4rem;
-  color: #343434;
+  align-self: self-end;
 }
 
 nav {
   grid-area: nav;
-  font-size: 1.5rem;
-  padding: 4rem 4rem 4rem 0rem;
+  font-size: 3vh;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 footer {
   grid-area: foot;
-  font-family: Helvetica, sans-serif;
-  font-size: 0.7rem;
-  padding: 4rem;
+  align-self: self-end;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.8rem;
   text-align: right;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
-  letter-spacing: 0.3rem;
+  justify-content: flex-end;
+  gap: 1.5rem;
 }
 
 .nav-container a {
-  color: blue;
+  color: #eeff41;
 }
