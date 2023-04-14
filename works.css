@@ -35,125 +35,135 @@ li {
 }
 
 body {
-  display: grid;
   width: 100%;
   height: 100%;
-  grid-template-areas:
-    "head nav"
-    "head foot";
-  grid-template-rows: 10fr 1fr;
-  grid-template-columns: 5fr 2fr;
+}
+
+main {
+  margin-top: 10vh;
   padding: 3rem;
-}
-
-header {
-  grid-area: head;
-  display: grid;
-  grid-template-areas:
-    "title1 content1"
-    "title2 content2"
-    "title3 content3"
-    "title4 content4"
-    "title5 content5"
-    "title6 content6";
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 5fr;
-}
-
-#project {
-  grid-area: title1;
-}
-
-#type {
-  grid-area: title2;
-}
-#architect {
-  grid-area: title3;
-}
-
-#location {
-  grid-area: title4;
-}
-
-#email {
-  grid-area: title5;
-}
-#phone {
-  grid-area: title6;
-}
-
-#project-content {
-  grid-area: content1;
-}
-#type-content {
-  grid-area: content2;
-}
-#architect-content {
-  grid-area: content3;
-  color: rgb(31, 244, 15);
-}
-#location-content {
-  grid-area: content4;
-}
-#email-content {
-  grid-area: content5;
-}
-#phone-content {
-  grid-area: content6;
-}
-
-#project,
-#type,
-#architect,
-#location,
-#email,
-#phone {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 3vh;
-  align-self: self-end;
-}
-
-#project-content,
-#type-content,
-#architect-content,
-#location-content,
-#email-content,
-#phone-content {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 7vh;
-  align-self: self-end;
-}
-
-.header-container {
-  display: flex;
-  height: 5vh;
-  align-content: flex-end;
-}
-
-nav {
-  grid-area: nav;
-  font-size: 3vh;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.5rem;
 }
 
 footer {
-  grid-area: foot;
-  align-self: self-end;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 0.8rem;
   text-align: right;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
 }
 
 .nav-container {
   display: flex;
-  justify-content: flex-end;
-  gap: 1.5rem;
+  justify-content: space-between;
 }
 
 .nav-container a {
   color: black;
+}
+
+.publications {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  position: fixed;
+  font-size: 3vh;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  top: 0;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: white;
+  border-top: 1px solid black;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 1.5rem;
+  padding-left: 0;
+  text-align: left;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-button:hover {
+  color: blue;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.accordion-content p {
+  padding: 1rem 0;
+}
+
+.accordion-button-number {
+  flex: 2;
+}
+
+.accordion-button-title {
+  flex: 3;
+}
+
+.accordion-button-location {
+  flex: 3;
+}
+
+.accordion-button-type {
+  flex: 3;
+}
+
+.accordion-button-year {
+  flex: 0.5;
+}
+
+.accordion-content-text {
+  flex: 2;
+  padding-top: 2rem;
+}
+
+.accordion-content-pictures {
+  flex: 3;
+  margin: 2rem 0 3rem 0;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accordion-content-pictures-1 {
+  flex: 4;
+  height: 40vh;
+  background-color: blue;
+}
+
+.accordion-content-pictures-2 {
+  flex: 2;
+  height: 40vh;
+  background-color: blue;
 }
