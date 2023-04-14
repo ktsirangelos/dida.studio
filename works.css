@@ -47,9 +47,8 @@ main {
 
 footer {
   font-size: 0.8rem;
-  text-align: right;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
+  text-align: center;
+  padding: 3rem;
 }
 
 .nav-container {
@@ -74,7 +73,7 @@ footer {
   padding: 3rem;
   padding-bottom: 1rem;
   width: 100%;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3.5px);
   top: 0;
 }
 
@@ -106,7 +105,7 @@ footer {
 }
 
 .accordion-button:hover {
-  color: blue;
+  color: #f77b22;
 }
 
 .accordion-content {
@@ -159,11 +158,11 @@ footer {
 .accordion-content-pictures-1 {
   flex: 4;
   height: 40vh;
-  background-color: blue;
+  background-color: #f77b22;
 }
 
 .accordion-content-pictures-2 {
   flex: 2;
   height: 40vh;
-  background-color: blue;
+  background-color: #f77b22;
 }
