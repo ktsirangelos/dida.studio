@@ -1,5 +1,5 @@
 @font-face {
-  src: url("HelveticaNeueCyr-Light.woff2") format("woff2");
+  src: url("fonts/HelveticaNeueCyr-Light.woff2") format("woff2");
   font-family: "HelveticaNeue-Light";
   font-display: swap;
 }
@@ -54,6 +54,7 @@ body {
   padding-bottom: 1rem;
   backdrop-filter: blur(10px);
   width: 100%;
+  text-transform: uppercase;
 }
 
 header {

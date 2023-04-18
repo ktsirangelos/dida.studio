@@ -1,5 +1,5 @@
 @font-face {
-  src: url("HelveticaNeueCyr-Light.woff2") format("woff2");
+  src: url("fonts/HelveticaNeueCyr-Light.woff2") format("woff2");
   font-family: "HelveticaNeue-Light";
   font-display: swap;
 }
@@ -43,6 +43,9 @@ main {
   margin-top: 10vh;
   padding: 3rem;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
@@ -63,8 +66,9 @@ footer {
 .publications {
   margin-top: 10vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   font-size: 1.5rem;
+  gap: 1rem;
 }
 
 .navbar {
@@ -74,5 +78,7 @@ footer {
   padding-bottom: 1rem;
   width: 100%;
   backdrop-filter: blur(3.5px);
+  z-index: 1;
+  text-transform: uppercase;
   top: 0;
 }
