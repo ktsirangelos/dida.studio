@@ -149,6 +149,15 @@ footer {
   text-align: right;
   padding-right: 3rem;
   padding-bottom: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  display: flex;
+  gap: 1.5rem;
+  align-self: flex-end;
+  text-transform: uppercase;
 }
 
 .nav-container {
