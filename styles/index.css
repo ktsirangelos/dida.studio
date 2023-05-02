@@ -52,17 +52,26 @@ body {
   font-size: 3vh;
   padding: 3rem;
   padding-bottom: 1rem;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   width: 100%;
   text-transform: uppercase;
+}
+
+.cover {
+  opacity: 75%;
+  background-color: white;
+  width: 90vw;
+  height: 82.5vh;
+  position: absolute;
+  margin-left: 5vw;
+  margin-top: 17.5vh;
+  z-index: 1;
 }
 
 header {
   grid-area: head;
   display: grid;
   grid-template-areas:
-    "title1 content1"
-    "title2 content2"
     "title3 content3"
     "title4 content4"
     "title5 content5"
@@ -102,7 +111,7 @@ header {
 }
 #architect-content {
   grid-area: content3;
-  color: white;
+  /* color: white; */
 }
 #location-content {
   grid-area: content4;
@@ -139,7 +148,7 @@ nav {
   font-size: 3vh;
   padding-right: 3rem;
   padding-top: 3rem;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 footer {
@@ -167,5 +176,9 @@ footer ul {
 }
 
 .nav-container a {
-  color: #eeff42;
+  color: black;
+}
+
+.nav-container a:hover {
+  color: white;
 }
