@@ -42,7 +42,7 @@ body {
 main {
   margin-top: 10vh;
   padding: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -64,7 +64,16 @@ footer {
   margin-top: 10vh;
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.publications-text {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 0 10rem;
 }
 
 .navbar {
@@ -77,6 +86,21 @@ footer {
   top: 0;
   z-index: 1;
   text-transform: uppercase;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5rem 5rem 0rem 5rem;
+}
+
+.filter a {
+  color: #f77b22;
+}
+
+.filter a:hover {
+  text-decoration: underline;
 }
 
 .accordion {
@@ -101,7 +125,7 @@ footer {
   outline: none;
   cursor: pointer;
   transition: background-color 0.2s;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -124,11 +148,11 @@ footer {
 }
 
 .accordion-button-number {
-  flex: 2;
+  flex: 1.5;
 }
 
 .accordion-button-title {
-  flex: 3;
+  flex: 2;
 }
 
 .accordion-button-location {
@@ -136,11 +160,11 @@ footer {
 }
 
 .accordion-button-type {
-  flex: 3;
+  flex: 2;
 }
 
 .accordion-button-year {
-  flex: 0.5;
+  flex: 1;
 }
 
 .accordion-content-text {
