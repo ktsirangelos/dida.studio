@@ -156,15 +156,15 @@ footer {
 }
 
 .accordion-button-location {
-  flex: 3;
+  flex: 3.5;
 }
 
 .accordion-button-type {
-  flex: 2;
+  flex: 2.5;
 }
 
 .accordion-button-year {
-  flex: 1;
+  flex: 0.5;
 }
 
 .accordion-content-text {
