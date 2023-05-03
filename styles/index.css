@@ -61,10 +61,10 @@ body {
   opacity: 75%;
   background-color: white;
   width: 90vw;
-  height: 92vh;
+  height: 78vh;
   position: absolute;
   margin-left: 5vw;
-  margin-top: 8vh;
+  margin-top: 12vh;
   z-index: 1;
 }
 
@@ -76,9 +76,10 @@ header {
     "title4 content4"
     "title5 content5"
     "title6 content6";
-  grid-template-rows: auto;
+  grid-template-rows: repeat(4, 5rem);
   grid-template-columns: 180px 5fr;
   padding-left: 3rem;
+  padding-top: 3rem;
 }
 
 #project {
