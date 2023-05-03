@@ -85,7 +85,7 @@ main {
   font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(27, 10vh);
+  grid-template-rows: repeat(51, 10vh);
 }
 
 .text1,
@@ -111,8 +111,8 @@ main {
 .text3 {
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row-start: 15;
-  grid-row-end: 17;
+  grid-row-start: 32;
+  grid-row-end: 35;
 }
 .text4 {
   grid-column-start: 1;
@@ -146,6 +146,36 @@ main {
 }
 
 .land2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.land3 {
+  /* opacity: 50%; */
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 44;
+  grid-row-end: 52;
+  background-color: #f77b22;
+}
+
+.land3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.land4 {
+  /* opacity: 50%; */
+  grid-column-start: 5;
+  grid-column-end: 11;
+  grid-row-start: 33;
+  grid-row-end: 38;
+  background-color: #f77b22;
+}
+
+.land4 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -206,7 +236,27 @@ main {
   background-color: #f77b22;
 }
 
+.opacity {
+  opacity: 50%;
+}
+
 .port4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.port5 {
+  /* opacity: 50%; */
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 37;
+  grid-row-end: 42;
+  background-color: #f77b22;
+  z-index: 1;
+}
+
+.port5 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -214,6 +264,6 @@ main {
 
 footer {
   font-size: 0.8rem;
-  text-align: right;
+  text-align: center;
   padding: 3rem;
 }

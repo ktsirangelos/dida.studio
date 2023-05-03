@@ -61,10 +61,10 @@ body {
   opacity: 75%;
   background-color: white;
   width: 90vw;
-  height: 82.5vh;
+  height: 92vh;
   position: absolute;
   margin-left: 5vw;
-  margin-top: 17.5vh;
+  margin-top: 8vh;
   z-index: 1;
 }
 
@@ -166,7 +166,7 @@ footer ul {
   display: flex;
   gap: 1.5rem;
   align-self: flex-end;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .nav-container {
