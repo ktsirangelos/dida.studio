@@ -71,10 +71,6 @@ header {
   position: fixed;
   z-index: -1;
   font-size: 4rem;
-  top: 0vh;
-  left: 7vw;
-  margin: 7vh 0;
-  padding: 3rem 0;
   line-height: 5rem;
 }
 
@@ -83,27 +79,20 @@ header {
 section {
   z-index: 10;
   padding: 3rem 7vw;
-  margin-top: 50vh;
+  margin-top: 7vh;
 }
 
 // Pictures
 
 .pictures {
-  // margin-bottom: 100vh;
-
-  img {
-    width: 100%;
-    margin-bottom: 20vh;
-  }
+  margin-bottom: 25vh;
+  font-size: 4rem;
 }
 
 // Footer
 
 footer {
-  width: 100%;
   font-size: 1.3rem;
-  margin-top: 100vh;
-  padding: 3rem 7vw;
 
   ul {
     display: grid;
