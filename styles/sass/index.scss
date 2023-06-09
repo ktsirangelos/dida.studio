@@ -76,6 +76,11 @@ header {
   margin: 7vh 0;
   padding: 3rem 0;
   line-height: 5rem;
+
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 // Floating Section
@@ -102,7 +107,7 @@ section {
 footer {
   width: 100%;
   font-size: 1.3rem;
-  margin-top: 100vh;
+  margin-top: 60vh;
   padding: 3rem 7vw;
 
   ul {

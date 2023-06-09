@@ -1,0 +1,227 @@
+@font-face {
+  src: url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2");
+  font-family: "HelveticaNeue-Light";
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", sans-serif;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline-block;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin-top: 10vh;
+  padding: 3rem;
+  font-size: 1.3rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container a {
+  color: black;
+}
+
+.publications {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.publications-text {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 0 10rem;
+}
+
+.navbar {
+  position: fixed;
+  font-size: 3vh;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  backdrop-filter: blur(3.5px);
+  top: 0;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5rem 5rem 0rem 5rem;
+}
+
+.filter a {
+  color: #f77b22;
+}
+
+.filter a:hover {
+  text-decoration: underline;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: white;
+  border-top: 1px solid black;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 1.5rem;
+  padding-left: 0;
+  text-align: left;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-button:hover {
+  color: #f77b22;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.accordion-content p {
+  padding: 2rem 0;
+}
+
+.accordion-button-number {
+  flex: 1.5;
+}
+
+.accordion-button-title {
+  flex: 2.5;
+}
+
+.accordion-button-location {
+  flex: 3.5;
+}
+
+.accordion-button-type {
+  flex: 2.5;
+}
+
+.accordion-button-year {
+  flex: 0.5;
+}
+
+.accordion-content-text {
+  flex: 2;
+  margin: 3vh 0 4vh 0;
+  height: 40vh;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.accordion-content-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-content-text a {
+  color: #f77b22;
+}
+
+.accordion-content-text a:hover {
+  text-decoration: underline;
+}
+
+.accordion-content-pictures {
+  flex: 3;
+  margin: 3vh 0 3vh 0;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accordion-content-pictures-1 {
+  flex: 4;
+  height: 40vh;
+  width: auto;
+  background-color: #f77b22;
+}
+
+.accordion-content-pictures-1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.accordion-content-pictures-2 {
+  flex: 2;
+  height: 40vh;
+  width: auto;
+  background-color: #f77b22;
+}
+
+.accordion-content-pictures-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

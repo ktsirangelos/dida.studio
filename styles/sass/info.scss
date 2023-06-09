@@ -80,13 +80,19 @@ section {
   z-index: 10;
   padding: 3rem 7vw;
   margin-top: 7vh;
+
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 // Pictures
 
 .pictures {
   margin-bottom: 25vh;
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
 }
 
 // Footer
