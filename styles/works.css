@@ -146,7 +146,7 @@ footer .top {
   transition: max-height 0.5s;
   display: grid;
   grid-template-columns: 10fr repeat(3, 5fr);
-  grid-template-rows: 40vh;
+  grid-template-rows: 50vh;
 }
 
 .accordion-button-title {
@@ -166,7 +166,7 @@ footer .top {
 }
 
 .accordion-content-text {
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 1rem 0rem 2rem 0rem;
   display: flex;
   font-size: 1.1rem;
   justify-content: space-between;
@@ -183,20 +183,20 @@ footer .top {
 .accordion-content-pictures-1 {
   grid-column-start: 1;
   grid-column-end: 2;
-  padding: 2rem 1rem 2rem 0rem;
+  padding: 1rem 1rem 2rem 0rem;
 }
 
 .accordion-content-pictures-1 img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   filter: opacity(85%);
 }
 
 .accordion-content-pictures-2 {
   grid-column-start: 2;
   grid-column-end: 3;
-  padding: 2rem 1rem 2rem 0rem;
+  padding: 1rem 1rem 2rem 0rem;
 }
 
 .accordion-content-pictures-2 img {
