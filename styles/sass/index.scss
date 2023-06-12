@@ -76,12 +76,10 @@ nav {
 header {
   position: fixed;
   z-index: -1;
-  font-size: 3rem;
-  top: 0vh;
+  font-size: 6vh;
+  line-height: 7.5vh;
+  top: 16vh;
   left: 7vw;
-  margin: 5rem 0;
-  padding: 3rem 0;
-  line-height: 4rem;
 
   a:hover {
     text-decoration: none;
@@ -93,7 +91,7 @@ header {
 
 section {
   z-index: 10;
-  padding: 3rem 7vw;
+  padding: 5vh 7vw;
   margin-top: 50vh;
 }
 

@@ -70,16 +70,16 @@ nav {
 header {
   position: fixed;
   z-index: -1;
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 6vh;
+  line-height: 7.5vh;
 }
 
 // Floating Section
 
 section {
   z-index: 10;
-  padding: 3rem 7vw;
-  margin-top: 5rem;
+  padding: 0 7vw 3rem 7vw;
+  margin-top: 16vh;
 
   a:hover {
     text-decoration: none;
@@ -91,8 +91,8 @@ section {
 
 .pictures {
   margin-bottom: 25vh;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 6vh;
+  line-height: 7vh;
 }
 
 // Footer

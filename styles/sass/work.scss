@@ -67,7 +67,7 @@ nav {
 // Layout
 
 main {
-  margin-top: 8rem;
+  margin-top: 16vh;
 }
 
 // Text
@@ -80,8 +80,8 @@ main {
 
   &-text {
     display: flex;
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 6vh;
+    line-height: 7.5vh;
     padding: 0 7vw;
   }
 }
@@ -182,10 +182,10 @@ footer .top {
     &-text {
       padding: 1rem 0rem 2rem 0rem;
       display: flex;
-      font-size: 1.1rem;
       justify-content: space-between;
       flex-direction: column;
-      line-height: 1.5;
+      font-size: 2.4vh;
+      line-height: 3.4vh;
       grid-column-start: 3;
       grid-column-end: 5;
 
@@ -194,7 +194,7 @@ footer .top {
       }
 
       .template {
-        font-size: 0.8rem;
+        font-size: 1.7vh;
       }
     }
 
