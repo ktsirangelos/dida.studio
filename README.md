@@ -1,9 +1,7 @@
-# Work in progress (rebuilding with React and Node.js)
+_Work in progress - rebuilding with React and Node.js_
 
 ## Portfolio for architecture studio
 
-### 1: main frontend
-
-### 2: content managemement panel
-
-### 3: backend
+- main frontend
+- content managemement panel
+- backend
