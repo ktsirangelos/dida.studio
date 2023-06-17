@@ -1,5 +1,9 @@
-# Work in progress
+# Work in progress (rebuilding with React and Node.js)
 
-## Simple static website made with HTML, Sass, JS
+## Portfolio for architecture studio
 
-## This project will be rebuilt with React and Node.js
+### 1: main frontend
+
+### 2: content managemement panel
+
+### 3: backend
