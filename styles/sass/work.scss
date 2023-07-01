@@ -184,12 +184,12 @@ main {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      font-size: 2.4vh;
+      font-size: 2.1vh;
       line-height: 3.4vh;
       grid-column-start: 3;
       grid-column-end: 5;
 
-      a {
+      a:hover {
         color: white;
       }
 
