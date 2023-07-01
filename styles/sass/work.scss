@@ -97,20 +97,19 @@ main {
   padding: 0 7vw;
 }
 
-.filter {
+.filter-items {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
   font-size: 1.3rem;
-}
 
-.filter a {
-  color: black;
-}
-
-.filter a:hover {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 
 // Titles
@@ -145,6 +144,10 @@ main {
     display: grid;
     grid-template-columns: 10fr repeat(3, 5fr);
     font-size: 1.3rem;
+
+    &.disabled {
+      color: #b3b3b3;
+    }
 
     &:hover {
       color: white;
