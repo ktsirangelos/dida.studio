@@ -100,12 +100,13 @@ main {
 .filter-items {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
-  font-size: 1.3rem;
 
-  a {
-    color: black;
+  button {
+    font-size: 1.3rem;
+    border: none;
+    background-color: transparent;
+
     &:hover {
-      text-decoration: none;
       color: white;
       cursor: pointer;
     }
@@ -173,12 +174,16 @@ main {
 
   &-content {
     padding: 0 7vw;
-    max-height: 0;
     overflow: hidden;
+    max-height: 0;
     transition: max-height 0.7s;
     display: grid;
     grid-template-columns: 10fr repeat(3, 5fr);
     grid-template-rows: 50vh;
+
+    &.active {
+      max-height: 50vh;
+    }
 
     &-text {
       padding: 1rem 0rem 2rem 0rem;

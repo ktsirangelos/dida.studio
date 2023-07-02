@@ -1,53 +1,57 @@
 import { projects } from "../projects-data/projects.js";
 
-// Accordion DOM reference
-const accordion = document.querySelector(".accordion");
+// ACCORDION LIST
 
-// Initial render of projects
-renderProjects(projects);
+// Bindings
 
-// Filter items click event listener
-const filterItems = document.querySelectorAll(".filter-items a");
+const accordionList = document.querySelector(".accordion");
+const filterItems = document.querySelectorAll(".filter-items button");
+
+// Event listeners
 
 filterItems.forEach((item) => {
   item.addEventListener("click", (event) => {
     const filterValue = event.target.id;
-    if (filterValue === "all") {
-      renderProjects(projects); // If 'all', render original projects array
-    } else {
-      filterProjects(filterValue); // Otherwise, filter and render
-    }
+    filterValue === "all"
+      ? renderProjects(projects)
+      : filterProjects(filterValue);
   });
 });
 
-function filterProjects(filterValue) {
-  // Clone and sort projects based on filter
+// Functions
+
+const filterProjects = (filterValue) => {
   const sortedProjects = [...projects].sort((a, b) => {
-    return a.filter === filterValue ? -1 : 1;
+    if (a.filter === filterValue && b.filter !== filterValue) {
+      return -1;
+    } else if (a.filter !== filterValue && b.filter === filterValue) {
+      return 1;
+    } else {
+      return 0;
+    }
   });
+  renderProjects(sortedProjects, filterValue);
+};
 
-  // Render sorted projects
-  renderProjects(sortedProjects, filterValue); // pass filterValue here
-}
+const renderProjects = (projectArray, filterValue) => {
+  accordionList.innerHTML = "";
 
-function renderProjects(projectArray, filterValue) {
-  // Clear current accordion content
-  accordion.innerHTML = "";
-
-  // Render accordion with provided project array
   projectArray.forEach((projectObject) => {
+    const formatedCode = projectObject.code.toString().split("").join(".");
+
     const disableButton =
       filterValue &&
       filterValue !== "all" &&
       filterValue !== projectObject.filter;
+
     const buttonClass = disableButton
       ? "accordion-button disabled"
       : "accordion-button";
-    accordion.innerHTML += `
+
+    accordionList.innerHTML += `
       <div class="accordion-item">
         <button class="${buttonClass}">
-          <div class="accordion-button-title">
-            ${projectObject.title}
+          <div class="accordion-button-title">${formatedCode} &nbsp; ${projectObject.title}
           </div>
           <div class="accordion-button-type">${projectObject.type}</div>
           <div class="accordion-button-year">${projectObject.year}</div>
@@ -79,34 +83,32 @@ function renderProjects(projectArray, filterValue) {
     `;
   });
 
-  // Refresh accordion button event listeners
+  // ACCORDION ITEMS
+
+  // Functions
+
+  const openItem = (clickedItem) => {
+    document.querySelectorAll(".accordion-item").forEach((otherItem) => {
+      if (otherItem !== clickedItem) {
+        otherItem
+          .querySelector(".accordion-content")
+          .classList.remove("active");
+      }
+    });
+  };
+
+  // Event listeners
+
   document.querySelectorAll(".accordion-button").forEach((button) => {
     button.addEventListener("click", () => {
       const accordionItem = button.parentElement;
       const content = button.nextElementSibling;
-
-      // Close all other accordion items
-      document
-        .querySelectorAll(".accordion-item")
-        .forEach((otherAccordionItem) => {
-          if (otherAccordionItem !== accordionItem) {
-            otherAccordionItem
-              .querySelector(".accordion-button")
-              .classList.remove("active");
-            otherAccordionItem.querySelector(
-              ".accordion-content"
-            ).style.maxHeight = null;
-          }
-        });
-
-      // Toggle the clicked accordion item
-      if (button.classList.contains("active")) {
-        button.classList.remove("active");
-        content.style.maxHeight = null;
-      } else {
-        button.classList.add("active");
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+      openItem(accordionItem);
+      content.classList.toggle("active");
     });
   });
-}
+};
+
+// Init
+
+renderProjects(projects);
