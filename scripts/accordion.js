@@ -6,15 +6,14 @@ import { projects } from "../projects-data/projects.js";
 
 const accordionList = document.querySelector(".accordion");
 const filterItems = document.querySelectorAll(".filter-items button");
+let hasRendered = false;
 
 // Event listeners
 
 filterItems.forEach((item) => {
   item.addEventListener("click", (event) => {
     const filterValue = event.target.id;
-    filterValue === "all"
-      ? renderProjects(projects)
-      : filterProjects(filterValue);
+    filterProjects(filterValue);
   });
 });
 
@@ -47,10 +46,21 @@ const renderProjects = (projectArray, filterValue) => {
 
   projectArray.forEach((projectObject) => {
     const formatedCode = projectObject.code.toString().split("").join(".");
-    const buttonClass = determineButtonClass(filterValue, projectObject);
+    const disableItem =
+      filterValue &&
+      filterValue !== "all" &&
+      filterValue !== projectObject.filter;
+
+    const itemClass = disableItem
+      ? "accordion-item disabled"
+      : "accordion-item";
+
+    const buttonClass = disableItem
+      ? "accordion-button disabled"
+      : "accordion-button";
 
     accordionItemsHTML += `
-           <div class="accordion-item">
+           <div class="${itemClass}">
              <button class="${buttonClass}">
                <div class="accordion-button-title">${formatedCode} &nbsp; ${projectObject.title}
                </div>
@@ -85,31 +95,46 @@ const renderProjects = (projectArray, filterValue) => {
   });
 
   accordionList.innerHTML = accordionItemsHTML;
+  hasRendered = true;
 };
 
 const filterProjects = (filterValue) => {
-  accordionList.classList.add("fade-out");
+  if (hasRendered) {
+    accordionList.classList.add("fade-out");
+  }
 
-  setTimeout(() => {
-    const sortedProjects = [...projects].sort((a, b) => {
-      if (a.filter === filterValue && b.filter !== filterValue) {
-        return -1;
-      } else if (a.filter !== filterValue && b.filter === filterValue) {
-        return 1;
+  setTimeout(
+    () => {
+      let sortedProjects;
+
+      if (filterValue === "all") {
+        sortedProjects = [...projects];
       } else {
-        return 0;
+        sortedProjects = [...projects].sort((a, b) => {
+          if (a.filter === filterValue && b.filter !== filterValue) {
+            return -1;
+          } else if (a.filter !== filterValue && b.filter === filterValue) {
+            return 1;
+          } else {
+            return 0;
+          }
+        });
       }
-    });
 
-    renderProjects(sortedProjects, filterValue);
-    accordionList.classList.remove("fade-out");
-    accordionList.classList.add("fade-in");
+      renderProjects(sortedProjects, filterValue);
 
-    // Remove the fade-in class after it finishes.
-    setTimeout(() => {
-      accordionList.classList.remove("fade-in");
-    }, 500);
-  }, 500);
+      if (hasRendered) {
+        accordionList.classList.remove("fade-out");
+        accordionList.classList.add("fade-in");
+      }
+
+      // Remove the fade-in class after it finishes.
+      setTimeout(() => {
+        accordionList.classList.remove("fade-in");
+      }, 500);
+    },
+    hasRendered ? 500 : 0
+  );
 };
 
 const openItem = (clickedItem) => {

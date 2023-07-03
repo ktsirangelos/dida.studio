@@ -26,6 +26,32 @@ li {
   display: inline-block;
 }
 
+body {
+  animation: fadein 0.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeout 0.5s ease-out;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 // Typography
 
 @font-face {
@@ -133,6 +159,11 @@ main {
   &-item {
     background-color: transparent;
     border-top: 1px solid black;
+
+    &.disabled {
+      color: #b3b3b3;
+      border-top: 1px solid #b3b3b3;
+    }
   }
 
   &-button {
@@ -176,7 +207,7 @@ main {
     padding: 0 7vw;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.7s;
+    transition: max-height 0.75s;
     display: grid;
     grid-template-columns: 10fr repeat(3, 5fr);
     grid-template-rows: 50vh;
@@ -230,27 +261,6 @@ main {
   }
 }
 
-// Footer
-
-footer {
-  font-size: 1.3rem;
-  padding: 3rem 7vw;
-  margin-top: 20vh;
-}
-
-footer ul {
-  display: grid;
-  grid-template-columns: 10fr repeat(3, 5fr);
-}
-
-footer li {
-  align-self: center;
-}
-
-footer .top {
-  grid-column-start: 4;
-}
-
 // Animations
 
 @keyframes fade-out {
@@ -277,4 +287,25 @@ footer .top {
 
 .fade-in {
   animation: fade-in 0.5s ease-in-out forwards;
+}
+
+// Footer
+
+footer {
+  font-size: 1.3rem;
+  padding: 3rem 7vw;
+  margin-top: 20vh;
+}
+
+footer ul {
+  display: grid;
+  grid-template-columns: 10fr repeat(3, 5fr);
+}
+
+footer li {
+  align-self: center;
+}
+
+footer .top {
+  grid-column-start: 4;
 }
