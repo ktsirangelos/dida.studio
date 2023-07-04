@@ -10,8 +10,8 @@ export const projects = [
     direction: "USP",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem dolor, id impedit eum magnam amet. Eius dolore quo iste, consequatur debitis tempore impedit aliquam fugit illum minima molestias quos!",
-    picUrl1: "projects-data/2.2.1/L0.webp",
-    picUrl2: "projects-data/2.2.1/P0.webp",
+    picUrl1: "projects-data/white.webp",
+    picUrl2: "projects-data/white.webp",
     projectUrl: "projects-views/default.html",
   },
   {
