@@ -1,15 +1,13 @@
-import { projects } from "../projects-data/projects.js";
+import { projects } from "../data/projects.js";
 
-// ACCORDION LIST
+// Accordion list
 
 // Bindings
-
-const accordionList = document.querySelector(".accordion");
+const accordionList = document.querySelector(".accordion-list");
 const filterItems = document.querySelectorAll(".filter-items button");
 let hasRendered = false;
 
 // Event listeners
-
 filterItems.forEach((item) => {
   item.addEventListener("click", (event) => {
     const filterValue = event.target.id;
@@ -17,7 +15,6 @@ filterItems.forEach((item) => {
   });
 });
 
-// Event delegation for accordion buttons
 accordionList.addEventListener("click", (event) => {
   const button = event.target.closest(".accordion-button");
   if (button) {
@@ -29,7 +26,6 @@ accordionList.addEventListener("click", (event) => {
 });
 
 // Functions
-
 const determineButtonClass = (filterValue, projectObject) => {
   if (
     filterValue &&
@@ -68,12 +64,12 @@ const renderProjects = (projectArray, filterValue) => {
                <div class="accordion-button-year">${projectObject.year}</div>
              </button>
              <div class="accordion-content">
-               <div class="accordion-content-pictures-1">
+               <div class="accordion-content-picture-1">
                  <a href="${projectObject.projectUrl}">
                    <img src="${projectObject.picUrl1}" alt="${projectObject.title}" />
                  </a>
                </div>
-               <div class="accordion-content-pictures-2">
+               <div class="accordion-content-picture-2">
                  <a href="${projectObject.projectUrl}">
                    <img src="${projectObject.picUrl2}" alt="${projectObject.title}" />
                  </a>
@@ -98,6 +94,9 @@ const renderProjects = (projectArray, filterValue) => {
   hasRendered = true;
 };
 
+// Accordion items
+
+// Functions
 const filterProjects = (filterValue) => {
   if (hasRendered) {
     accordionList.classList.add("fade-out");
@@ -128,7 +127,6 @@ const filterProjects = (filterValue) => {
         accordionList.classList.add("fade-in");
       }
 
-      // Remove the fade-in class after it finishes.
       setTimeout(() => {
         accordionList.classList.remove("fade-in");
       }, 500);
@@ -146,5 +144,4 @@ const openItem = (clickedItem) => {
 };
 
 // Init
-
 renderProjects(projects);

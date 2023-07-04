@@ -144,3 +144,25 @@
   grid-row-end: 49;
   z-index: 1;
 }
+
+.projects-footer {
+  font-size: 1.3rem;
+  padding: 3rem 7vw;
+  margin-top: 30vh;
+
+  ul {
+    display: grid;
+    grid-template-columns: 10fr repeat(3, 5fr);
+  }
+
+  li {
+    align-self: center;
+  }
+
+  .top {
+    grid-column-start: 4;
+    a:hover {
+      color: #c7c3b8b2;
+    }
+  }
+}

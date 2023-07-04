@@ -1,0 +1,15 @@
+export const clients = [
+  { id: 1, name: "ΜΟΥΣΕΙΟ ΜΠΕΝΑΚΗ", url: "https://www.benaki.gr/" },
+  { id: 2, name: "COCO-MAT", url: "https://www.coco-mat.com/" },
+  { id: 3, name: "MOMus", url: "https://www.momus.gr/" },
+  { id: 4, name: "POHA HOUSE", url: "https://www.pohahouse.com/" },
+  { id: 5, name: "Ergon Foods", url: "https://www.ergonfoods.com/" },
+  { id: 6, name: "TETHYS", url: "https://www.tethys.gr/" },
+  { id: 7, name: "Prodea", url: "https://www.prodea.gr/" },
+  { id: 8, name: "Ξανθάκης ΑΤΕ", url: "https://www.xanthakis.gr/" },
+  { id: 9, name: "Unismack", url: "https://www.unismack.gr/" },
+  { id: 10, name: "Delasalle", url: "https://www.delasalle.gr/" },
+  { id: 11, name: "Pnevmatikos", url: "https://www.pnevmatikos.gr/" },
+  { id: 12, name: "Steps", url: "https://www.steps.gr/" },
+  { id: 13, name: "Keng", url: "https://www.keng.gr/" },
+];

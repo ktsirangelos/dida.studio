@@ -1,26 +1,11 @@
 .public-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
   margin-top: 16vh;
 }
 
-.public-work {
-  display: flex;
-  justify-content: center;
-  font-size: 1.3rem;
-
-  &-text {
-    display: flex;
-    font-size: 5.9vh;
-    line-height: 7.5vh;
-    padding: 0 7vw;
-  }
-}
-
-.public-section {
-  z-index: 10;
-  margin-top: 8vh;
-}
-
-.public-titles {
+.public-template {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
   padding: 1.5vh 7vw;
@@ -29,14 +14,12 @@
   font-size: 1.3rem;
 }
 
-.public-publications {
-  .publication {
-    display: grid;
-    grid-template-columns: 10fr 10fr 5fr;
-    padding: 1.5vh 7vw;
-    border-bottom: 1px solid black;
-    p {
-      font-size: 1.3rem;
-    }
+.publication {
+  display: grid;
+  grid-template-columns: 10fr 10fr 5fr;
+  padding: 1.5vh 7vw;
+  border-bottom: 1px solid black;
+  p {
+    font-size: 1.3rem;
   }
 }

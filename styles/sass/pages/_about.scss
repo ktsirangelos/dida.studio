@@ -1,35 +1,30 @@
-// Layout
-
-.info-main {
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
   margin-top: 16vh;
 }
 
-// Text
-
-.info-head {
+.default-text {
   display: flex;
-  font-size: 5.9vh;
-  line-height: 7.5vh;
+  flex-direction: column;
+  gap: 5vh;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   padding: 0 7vw;
-  margin-bottom: 2rem;
 }
 
-.info-work {
+.clients {
   display: flex;
-  justify-content: center;
-  font-size: 1.3rem;
-
-  &-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    padding: 0 7vw;
+  flex-direction: column;
+  gap: 5vh;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding: 0 7vw;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+    font-size: 1rem;
+    line-height: 2rem;
   }
-}
-
-.info-section {
-  z-index: 10;
-  margin-top: 8vh;
 }

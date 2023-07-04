@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work – Christina Tsirangelou</title>
-    <link rel="stylesheet" href="styles/css/main.css" />
-    <script type="module" src="scripts/accordion.js?v=3.0"></script>
+    <link rel="stylesheet" href="styles/css/main.css?v=1.0" />
+    <script type="module" src="./scripts/work.js?v=1.0"></script>
   </head>
-
   <body>
     <nav>
       <ul>
@@ -19,16 +18,16 @@
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
-    <div class="work-main">
-      <div>
-        <p class="work-work-text">
+    <main class="work-main">
+      <section class="header-text">
+        <p>
           Christina Tsirangelou delivers a wide spectrum of design works in the
           field of spatial design, such as Architectural design studies of New
           Built and Interior projects, along with Product design and Creative
           Consultancy, with a modern vernacular approach.
         </p>
-      </div>
-      <div div class="filter-container">
+      </section>
+      <section class="filter">
         <ul class="filter-items">
           <li><button id="all">All</button></li>
           <li><button id="architecture">Architecture</button></li>
@@ -36,24 +35,21 @@
           <li><button id="product">Product</button></li>
           <li><button id="research">Research</button></li>
           <li></li>
-        </ul>
-        <ul class="filter-items">
-          <li></li>
           <li><button id="exhibition">Exhibition</button></li>
           <li><button id="education">Education</button></li>
         </ul>
-      </div>
-      <div class="work-titles">
-        <p>Title</p>
-        <p></p>
-        <p>Type</p>
-        <p></p>
-        <p>Year</p>
-      </div>
-      <div class="work-work">
-        <div class="accordion"></div>
-      </div>
-    </div>
+      </section>
+      <section class="accordion">
+        <div class="accordion-template">
+          <p>Title</p>
+          <p></p>
+          <p>Type</p>
+          <p></p>
+          <p>Year</p>
+        </div>
+        <div class="accordion-list"></div>
+      </section>
+    </main>
     <footer>
       <ul>
         <li>
