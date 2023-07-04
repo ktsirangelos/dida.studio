@@ -1,0 +1,35 @@
+// Layout
+
+.info-main {
+  margin-top: 16vh;
+}
+
+// Text
+
+.info-head {
+  display: flex;
+  font-size: 5.9vh;
+  line-height: 7.5vh;
+  padding: 0 7vw;
+  margin-bottom: 2rem;
+}
+
+.info-work {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0 7vw;
+  }
+}
+
+.info-section {
+  z-index: 10;
+  margin-top: 8vh;
+}

@@ -1,0 +1,22 @@
+.home-header {
+  position: fixed;
+  z-index: -1;
+  font-size: 5.9vh;
+  line-height: 7.5vh;
+  top: 16vh;
+  left: 7vw;
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.home-pictures {
+  z-index: 10;
+  padding: 5vh 7vw;
+  margin-top: 50vh;
+  img {
+    width: 100%;
+    margin-bottom: 20vh;
+  }
+}
