@@ -146,6 +146,7 @@ main {
   grid-template-columns: repeat(5, 5fr);
   padding: 1.5vh 7vw;
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
   font-size: 1.3rem;
 }
 
@@ -158,11 +159,11 @@ main {
 
   &-item {
     background-color: transparent;
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 
     &.disabled {
       color: #b3b3b3;
-      border-top: 1px solid #b3b3b3;
+      border-bottom: 1px solid #b3b3b3;
     }
   }
 

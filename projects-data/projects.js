@@ -91,6 +91,21 @@ export const projects = [
   },
   {
     id: 7,
+    filter: "product",
+    code: 411,
+    title: "2d Line",
+    type: "Product",
+    year: 2016,
+    location: "London, United Kingdom",
+    direction: "157+173 designers",
+    description:
+      "House in Vari is a 2 storey house with mezzanine, in the seaside region of Vari, in Southeastern Athens. The proposal suggests a pool divided house with a composition of indoor and outdoor spaces, in order to create an introvert house model that multiplies the space within its shell.",
+    picUrl1: "projects-data/white.webp",
+    picUrl2: "projects-data/white.webp",
+    projectUrl: "projects-views/default.html",
+  },
+  {
+    id: 8,
     filter: "research",
     code: 521,
     title: "Athen's Kiosk",
