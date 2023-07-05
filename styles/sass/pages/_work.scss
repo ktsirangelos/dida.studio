@@ -110,6 +110,12 @@
       grid-column-start: 3;
       grid-column-end: 5;
 
+      a:link,
+      :visited,
+      :active {
+        color: inherit;
+      }
+
       a:hover {
         color: white;
       }

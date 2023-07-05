@@ -1,5 +1,3 @@
-// Layout
-
 .projects-nav {
   position: fixed;
   z-index: 10;
@@ -38,7 +36,7 @@
   font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(56, 10vh);
+  grid-template-rows: repeat(70, 10vh);
 
   img {
     width: 100%;
@@ -80,6 +78,13 @@
   grid-row-end: 41;
 }
 
+.land0 {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 58;
+  grid-row-end: 63;
+}
+
 .land1 {
   grid-column-start: 4;
   grid-column-end: 11;
@@ -106,6 +111,13 @@
   grid-column-end: 11;
   grid-row-start: 36;
   grid-row-end: 43;
+}
+
+.land5 {
+  grid-column-start: 5;
+  grid-column-end: 11;
+  grid-row-start: 62;
+  grid-row-end: 68;
 }
 
 .port1 {
@@ -143,6 +155,13 @@
   grid-row-start: 42;
   grid-row-end: 49;
   z-index: 1;
+}
+
+.port6 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 64;
+  grid-row-end: 71;
 }
 
 .projects-footer {
